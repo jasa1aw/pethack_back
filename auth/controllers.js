@@ -94,7 +94,7 @@ const confirmEmail = async (req, res) => {
 				secretKey,
 				{ expiresIn: 24 * 60 * 60 * 365 },
 			);
-			// res.status(200).send(`access_token: ${accessToken}, refreshToken: ${refreshToken}`);
+			res.status(200).send(`access_token: ${accessToken}, refreshToken: ${refreshToken}`);
 			// res.cookie("refreshToken", refreshToken, {
 			// 	httpOnly: true,
 			// 	sameSite: "strict",
@@ -113,7 +113,7 @@ const confirmEmail = async (req, res) => {
 			// 	    // продолжительность токена
 			// 	    expiresIn: 24 * 60 * 60
 			// 	});
-			// 	res.status(200).send(`access_token: ${token}`);
+				// res.status(200).send(`access_token: ${token}`);
 		}
 	} catch (error) {
 		console.error(error);
